@@ -12,6 +12,7 @@ import {AssetCreatorDialog} from './asset-creator.dialog';
 })
 export class AssetDetailPage implements OnInit, OnDestroy {
 
+  // declare variable
   asset$: Observable<Asset>;
   creatorDialogRef: MatDialogRef<AssetCreatorDialog>;
 
@@ -32,6 +33,7 @@ export class AssetDetailPage implements OnInit, OnDestroy {
     this.asset$ = this.assetService.findAssetByAssetNo(assetNo);
   }
 
+  // implement
   ngOnInit(): void {
     this.route.params.subscribe((params: { assetNo: string }) => {
       this.loadAsset(params.assetNo);

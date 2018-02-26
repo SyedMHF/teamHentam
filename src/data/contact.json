@@ -1,0 +1,24 @@
+{
+  "contactId": "A0001",
+  "name": "Hazel",
+  "phoneNumbers": [
+    {
+      "num": "019-879 7305",
+      "type": "PERSONAL"
+    },
+    {
+      "num": "019-888 8888",
+      "type": "BUSINESS"
+    }
+  ],
+  "emails": [
+    {
+      "address": "hazel@outlook.com",
+      "type": "PERSONAL"
+    },
+    {
+      "address": "jaylance@hotmail.com",
+      "type": "BUSINESS"
+    }
+  ]
+}

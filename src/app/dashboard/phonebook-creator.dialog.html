@@ -1,0 +1,78 @@
+<h1 mat-dialog-title>Phonebook Editor</h1>
+<div mat-dialog-content>
+  <mat-vertical-stepper linear>
+    <mat-step [stepControl]="editorForm1">
+      <form [formGroup]="editorForm">
+        <ng-template matStepLabel>
+          Fill out your name
+        </ng-template>
+        <mat-form-field flex>
+          <input matInput
+                 placeholder="Name"
+                 formControlName="name" required
+                 type="text">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext color="accent">
+            Next
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="editorForm2">
+      <form [formGroup]="editorForm">
+        <ng-template matStepLabel>
+          Fill out your personal details
+        </ng-template>
+        <mat-form-field flex>
+          <input matInput
+                 placeholder="Phone no."
+                 formControlName="num" required
+                 type="text">
+        </mat-form-field>
+        <mat-form-field flex>
+          <input matInput
+                 placeholder="Email"
+                 formControlName="address" required
+                 type="email">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext color="accent">
+            Next
+          </button>
+          <button mat-button matStepperPrevious color="primary">
+            Back
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="editorForm3" optional>
+      <form [formGroup]="editorForm">
+        <ng-template matStepLabel>
+          Fill out your business details
+        </ng-template>
+        <mat-form-field flex>
+          <input matInput
+                 placeholder="Phone no."
+                 formControlName="num"
+                 type="text">
+        </mat-form-field>
+        <mat-form-field flex>
+          <input matInput
+                 placeholder="Email"
+                 formControlName="address"
+                 type="email">
+        </mat-form-field>
+          <div mat-dialog-actions>
+            <button mat-raised-button color="accent" (click)="save(editorForm.value)" [disabled]="!editorForm.valid">
+              Add
+            </button>
+            <button mat-button color="primary" (click)="close()">
+              Close
+            </button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-vertical-stepper>
+</div>
+

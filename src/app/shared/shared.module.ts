@@ -5,15 +5,15 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {
   MatButtonModule,
   MatCardModule,
-  MatCheckboxModule,
+  MatCheckboxModule, MatExpansionModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
-  MatMenuModule,
+  MatMenuModule, MatRadioButton, MatRadioGroup, MatRadioModule,
   MatSelectModule,
   MatSidenavModule,
   MatSlideToggleModule,
-  MatSnackBarModule,
+  MatSnackBarModule, MatStepperModule,
   MatTableModule,
   MatTabsModule,
   MatToolbarModule,
@@ -47,6 +47,8 @@ const MATERIAL_MODULES: any[] = [
   MatSlideToggleModule, MatInputModule, MatCheckboxModule,
   MatToolbarModule, MatSnackBarModule, MatSidenavModule,
   MatTabsModule, MatSelectModule, MatTableModule,
+  MatExpansionModule, MatRadioModule, MatTabsModule,
+  MatCardModule, MatStepperModule,
 ];
 
 const COVALENT_MODULES: any[] = [

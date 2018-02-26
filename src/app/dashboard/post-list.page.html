@@ -1,0 +1,37 @@
+<script src="post-list.dashboard.ts"></script>
+<td-layout-nav title="Post List System" navigationRoute="/">
+  <button mat-icon-button td-menu-button tdLayoutToggle>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div td-toolbar-content layout="row" layout-align="center center" flex>
+    <span>Post List System</span>
+    <span flex></span>
+    <a mat-icon-button matTooltip="Profile">
+      <mat-icon>person</mat-icon>
+    </a>
+    <span>Sweedny Smithy Skinny Post</span>
+  </div>
+
+
+  <td-layout-card-over>
+    <div layout="row" layout-align="start center">
+      <div>
+        <mat-card-title>PostList {{(id$|async)?.userId}}</mat-card-title>
+        <mat-card-subtitle>Post List Detail</mat-card-subtitle>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div layout="column" class="inset" flex>
+
+      <!--asset information-->
+      <h3 mat-line>Post List Information</h3>
+      <p><b>Title:</b> {{(id$|async)?.title}}</p>
+      <p><b>Body:</b> {{(id$|async)?.body}}</p>
+    </div>
+
+    <mat-card-actions align="end">
+      <button mat-button="" color="primary" (click)="goBack()">Back</button>
+    </mat-card-actions>
+  </td-layout-card-over>
+</td-layout-nav>

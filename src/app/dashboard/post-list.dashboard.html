@@ -1,28 +1,47 @@
-<script src="phonebook-detail.page.ts"></script>
-<td-layout-nav title="Phonebook Management System" navigationRoute="/">
+<script src="post-list.page.ts"></script>
+<td-layout-nav title="Post List System" navigationRoute="/">
   <button mat-icon-button td-menu-button tdLayoutToggle>
     <mat-icon>menu</mat-icon>
   </button>
-  <div td-toolbar-content layout="row" layout-align="center center" flex></div>
+  <div td-toolbar-content layout="row" layout-align="center center" flex>
+    <span>Post List System</span>
+    <span flex></span>
+    <a mat-icon-button matTooltip="Profile">
+      <mat-icon>person</mat-icon>
+    </a>
+    <span>Sweedny Smithy Skinny Post</span>
+  </div>
   <div mat-content flex>
     <div layout-gt-md="row">
       <div flex-gt-md="70">
         <mat-card>
-          <mat-card-title>Phonebook</mat-card-title>
-          <mat-card-subtitle>List of contact</mat-card-subtitle>
+          <mat-card-title>Post List</mat-card-title>
+          <mat-card-subtitle>List of post</mat-card-subtitle>
           <mat-divider></mat-divider>
           <mat-list>
-            <ng-template let-phonebook let-last="last" ngFor [ngForOf]="phonebook$ | async">
+            <ng-template let-post let-last="last" ngFor [ngForOf]="postlist$ | async">
               <mat-list-item>
-                <button mat-icon-button (click)="viewPhonebook(phonebook)">
-                  <mat-icon>account_circle</mat-icon>
-                </button>
-                <p> {{phonebook?.name}} </p>
+                <h3 mat-line> {{post?.id}} </h3>
+                <span flex></span>
+                <span flex="80" layout-gt-xs="row">
+                  <div class="mat-caption tc-grey-700" flex-gt-xs="30">
+                    <!--<ng-template let-phoneNumbers let-last="last" ngFor [ngForOf]="phonebook.phoneNumbers">-->
+                      <!--{{phoneNumbers.num}}-->
+                    <!--</ng-template>-->
+                  </div>
+                </span>
+                <span>
+                  <!--button-->
+                  <button mat-icon-button (click)="viewPostlist(post)">
+                    <mat-icon>arrow_forward</mat-icon>
+                  </button>
+              </span>
               </mat-list-item>
               <mat-divider *ngIf="!last"></mat-divider>
             </ng-template>
           </mat-list>
         </mat-card>
+
       </div>
       <div flex-gt-md="30">
         <mat-card>
@@ -55,8 +74,8 @@
     </div>
   </td-layout-footer>
 </td-layout-nav>
-<a mat-fab color="accent" class="mat-fab-bottom-right fixed z-3" (click)="showAddDialog()">
-  <mat-icon>person_add</mat-icon>
-</a>
+<!--<a mat-fab color="accent" class="mat-fab-bottom-right fixed z-3" (click)="showAddDialog()">-->
+  <!--<mat-icon>add</mat-icon>-->
+<!--</a>-->
 
 

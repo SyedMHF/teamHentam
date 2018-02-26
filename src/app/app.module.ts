@@ -10,6 +10,13 @@ import {AssetService} from '../services/asset.service';
 import {AssetDetailPage} from './dashboard/asset-detail.page';
 import {DashboardPage} from './dashboard/dashboard.page';
 import {AssetCreatorDialog} from './dashboard/asset-creator.dialog';
+import {PhonebookService} from '../services/phonebook2.service';
+import {PhonebookDetailPage} from './dashboard/phonebook-detail.page';
+import {PostListService} from '../services/post-list.service';
+import {PostListPage} from './dashboard/post-list.page';
+import {PostListDashboard} from './dashboard/post-list.dashboard';
+import {PhonebookCreatorDialog} from './dashboard/phonebook-creator.dialog';
+import {PhonebookCategoryPipe} from './dashboard/phonebook-category.pipe';
 
 @NgModule({
   declarations: [
@@ -17,8 +24,18 @@ import {AssetCreatorDialog} from './dashboard/asset-creator.dialog';
     DashboardPage,
     AssetDetailPage,
     AssetCreatorDialog,
+    PhonebookCreatorDialog,
     MainLayout,
+    PhonebookDetailPage,
+    PostListDashboard,
+    PostListPage,
+
+    // component
+
+    // pipe
+    PhonebookCategoryPipe,
   ],
+
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -26,8 +43,8 @@ import {AssetCreatorDialog} from './dashboard/asset-creator.dialog';
     SharedModule,
     HttpClientModule,
   ],
-  providers: [AssetService],
-  entryComponents: [AssetCreatorDialog],
+  providers: [AssetService, PhonebookService, PostListService],
+  entryComponents: [AssetCreatorDialog, PhonebookCreatorDialog],
   bootstrap: [AppComponent],
 })
 export class AppModule {

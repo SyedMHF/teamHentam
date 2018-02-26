@@ -1,0 +1,98 @@
+[
+  {
+    "contactId": "A0001",
+    "name": "Hazel",
+    "phoneNumbers": [
+      {
+        "num": "019-879 7305",
+        "type": "PERSONAL"
+      },
+      {
+        "num": "019-888 8888",
+        "type": "BUSINESS"
+      }
+    ],
+    "emails": [
+      {
+        "address": "hazel@outlook.com",
+        "type": "PERSONAL"
+      },
+      {
+        "address": "jaylance@hotmail.com",
+        "type": "BUSINESS"
+      }
+    ]
+  },
+  {
+    "contactId": "A0002",
+    "name": "Zahir",
+    "phoneNumbers": [
+      {
+        "num": "011-242 2525",
+        "type": "PERSONAL"
+      },
+      {
+        "num": "010-243 3567",
+        "type": "BUSINESS"
+      }
+    ],
+    "emails": [
+      {
+        "address": "zahir@outlook.com",
+        "type": "PERSONAL"
+      },
+      {
+        "address": "nurZahir@gmail.com",
+        "type": "BUSINESS"
+      }
+    ]
+  },
+  {
+    "contactId": "A0003",
+    "name": "Wong",
+    "phoneNumbers": [
+      {
+        "num": "010-756 2348",
+        "type": "PERSONAL"
+      },
+      {
+        "num": "016-842 4871",
+        "type": "BUSINESS"
+      }
+    ],
+    "emails": [
+      {
+        "address": "wong@outlook.com",
+        "type": "PERSONAL"
+      },
+      {
+        "address": "jungAng@hotmail.com",
+        "type": "BUSINESS"
+      }
+    ]
+  },
+  {
+    "contactId": "A0004",
+    "name": "Shahril",
+    "phoneNumbers": [
+      {
+        "num": "016-158 1594",
+        "type": "PERSONAL"
+      },
+      {
+        "num": "019-823 5667",
+        "type": "BUSINESS"
+      }
+    ],
+    "emails": [
+      {
+        "address": "shahril@yahoo.com",
+        "type": "PERSONAL"
+      },
+      {
+        "address": "rizal@gmail.com",
+        "type": "BUSINESS"
+      }
+    ]
+  }
+]
